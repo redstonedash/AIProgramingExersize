@@ -17,24 +17,24 @@ import java.util.zip.ZipInputStream;
 import projectmanagment.ObjectThing;
 
 public class JavaClientController {
+	private Class<?> classToLoad;
+	private Method method;
+	private Object instance;
+	private Object result;
 	public JavaClientController() throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException
 	{
-		ObjectThing thing = new ObjectThing();
-		thing.name = "yo wassup";
 		System.out.println("Java Client Created");
-		URL[] url = new URL[]{new URL("file:///C:/Users/redstonedash/workspace/AIGame/AIProgramingExersize/DoNothingAI.jar")};
+		URL[] url = new URL[]{new URL("file:///C:/Users/377804/Documents/GitHub/AIProgramingExersize/Client.jar")};
 		
 		URLClassLoader child = new URLClassLoader(url);
 		//child.
-		Object x = null;
-		Class<?> classToLoad = child.loadClass("Head");
-		Method method = classToLoad.getDeclaredMethod("updateEvent"/*, Object.class*/);
-		Object instance = classToLoad.newInstance();
-		Object result = method.invoke(instance/*, thing*/);
-		/*
-		 * 
-		 * 
-		 * 
-		 */
+		classToLoad = child.loadClass("Head");
+		method = classToLoad.getDeclaredMethod("updateEvent");
+		instance = classToLoad.newInstance();
+	}
+	public ArrayList<double[]> Update(ArrayList<double[]> state) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException
+	{
+		result = method.invoke(instance);
+		return state;
 	}
 }
