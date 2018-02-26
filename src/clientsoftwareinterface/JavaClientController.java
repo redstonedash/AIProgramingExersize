@@ -21,7 +21,8 @@ public class JavaClientController {
 	private Method method;
 	private Object instance;
 	private Object result;
-	public JavaClientController() throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException
+	public JavaClientController() throws ClassNotFoundException, NoSuchMethodException, SecurityException, 
+	InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException
 	{
 		System.out.println("Java Client Created");
 		URL[] url = new URL[]{new URL("file:///C:/Users/377804/Documents/GitHub/AIProgramingExersize/Client.jar")};

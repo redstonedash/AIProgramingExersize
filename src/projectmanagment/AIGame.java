@@ -33,7 +33,6 @@ public class AIGame {
 			array[3] = rng.nextDouble()*100;
 			array[4] = rng.nextDouble()*360;
 		}
-		client.
 	}
 	/*
 	 * GameObject:
@@ -58,5 +57,10 @@ public class AIGame {
 	 * lvl 2 they become ranged or they get to unlock an ability from 4
 	 * lvl 3 they become ranged or they get to unlock an ability from 4
 	 */
+	private double[][] closestNeighbor(ArrayList<double[]> units)
+	{
+		
+		return null;
+	}
 }
 	
