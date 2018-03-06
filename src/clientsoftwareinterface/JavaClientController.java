@@ -33,9 +33,8 @@ public class JavaClientController {
 		method = classToLoad.getDeclaredMethod("updateEvent");
 		instance = classToLoad.newInstance();
 	}
-	public ArrayList<double[]> Update(ArrayList<double[]> state) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException
+	public Int Update(ArrayList<double[]> state) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException
 	{
-		result = method.invoke(instance);
-		return state;
+		return method.invoke(instance);
 	}
 }
