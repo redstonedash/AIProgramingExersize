@@ -48,6 +48,7 @@ public class AIGame {
 	}
 	private static void updateEvent()
 	{
+		freiendly.update()
 	}
 	private static void addUnit(ArrayList<ArrayList<Object>> units, double X, double Y, double R, double HP, int attackCD, boolean isRanged)
 	{
